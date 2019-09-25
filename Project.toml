@@ -1,0 +1,13 @@
+name = "LibAtomsReg"
+uuid = "290a2eb2-df6c-11e9-3da6-89062bb4f628"
+authors = ["Christoph Ortner <c.ortner@warwick.ac.uk>"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
