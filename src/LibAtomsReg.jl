@@ -18,7 +18,7 @@ regpath() = joinpath(homedir(), ".julia", "registries", "LibAtoms")
 register the module `M` in the `LibAtoms` registry
 """
 function register(M::Module; force = false, push = false)
-   if !string(M) in _registered_modules && !force
+   if !(string(M) in _registered_modules) && !force
       error("The module $(string(M)) appears not to be registered yet.")
    end
    Registrator.register(M, regpath())
