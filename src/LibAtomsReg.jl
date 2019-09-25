@@ -10,6 +10,7 @@ const _registered_modules =
       "JuLIPMaterials",
       "NBodyIPs",
       "IPFitting"
+      "LibAtomsReg"
    ]
 
 regpath() = joinpath(homedir(), ".julia", "registries", "LibAtoms")
@@ -31,7 +32,10 @@ end
 push the registry to the remote git repository
 """
 function push!()
-   run(`cd $(regpath()); git push`)
+   error("push! is not yet working")
+   run(`cd $(regpath())`)
+   run(`git push`)
+   run(`cd -`)
 end
 
 end # module
