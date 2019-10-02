@@ -11,7 +11,8 @@ const _registered_modules =
       "NBodyIPs",
       "IPFitting",
       "LibAtomsReg",
-      "PolyPairPots"
+      "PolyPairPots",
+      "Isaac"
    ]
 
 regpath() = joinpath(homedir(), ".julia", "registries", "LibAtoms")
