@@ -1,6 +1,6 @@
-using LibAtomsReg
+using MolSimReg
 using Test
 
-@testset "LibAtomsReg.jl" begin
+@testset "MolSimReg.jl" begin
     # Write your own tests here.
 end

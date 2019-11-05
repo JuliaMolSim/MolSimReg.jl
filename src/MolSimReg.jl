@@ -1,4 +1,4 @@
-module LibAtomsReg
+module MolSimReg
 
 import Registrator
 
@@ -10,19 +10,22 @@ const _registered_modules =
       "JuLIPMaterials",
       "NBodyIPs",
       "IPFitting",
-      "LibAtomsReg",
+      "MolSimReg",
       "PolyPairPots",
       "Isaac"
    ]
 
-regpath() = joinpath(homedir(), ".julia", "registries", "LibAtoms")
+regpath() = joinpath(homedir(), ".julia", "registries", "MolSim")
 
 """
-register the module `M` in the `LibAtoms` registry
+register the module `M` in the `MolSim` registry
+```
+register(M::Module; force = false, push = false)
+```
 """
 function register(M::Module; force = false, push = false)
    if !(string(M) in _registered_modules) && !force
-      error("The module $(string(M)) appears not to be registered yet.")
+      error("The module $(string(M)) appears not to be registered yet. Use `force = true`")
    end
    Registrator.register(M, regpath())
    if push
